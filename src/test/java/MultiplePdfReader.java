@@ -110,15 +110,5 @@ public class MultiplePdfReader {
             file.renameTo(new File(targetDir + "\\" + name));
         }
     }
-
-    //creates zips of all files/directories in a given folder
-    public static void main4(String[] args) {
-        File sourceDir = new File(sourceDirectory);
-        List<File> files = List.of(sourceDir.listFiles());
-        for (File file : files) {
-            String absPath = file.getAbsolutePath();
-            ZipUtil.pack(new File(absPath), new File(absPath + ".zip"));
-        }
-    }
 }
 
