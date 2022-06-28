@@ -57,6 +57,8 @@ public class Reader {
                 .replaceAll("Сх. Д. =", "N")
                 .replaceAll("\\s+N\\s+", "N")
                 .replaceAll("\\nX=\\d+", "E\n")
+                .replaceAll("^E", "E")
+                .replaceAll("\\s+E", "E")
                 .replaceAll("Y=\\d+", "");
         return refactored;
     }
